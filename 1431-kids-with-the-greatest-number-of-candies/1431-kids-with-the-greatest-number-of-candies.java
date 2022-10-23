@@ -9,8 +9,8 @@ class Solution {
         max = max - extraCandies;
         List<Boolean> arr = new ArrayList<Boolean>();
         
-        for(int i = 0 ; i  < candies.length; i++){
-            if (candies[i] >= max){
+        for(int i : candies){
+            if (i >= max){
                 arr.add(true);
             }
             else{
