@@ -18,7 +18,7 @@ class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> zig = new ArrayList<>();
         if(root == null) return zig;
-        bfs(root, 0);
+        dfs(root, 0);
         for(Map.Entry<Integer,ArrayList<Integer>> mapElement : map.entrySet()){
             if(mapElement.getKey()%2 == 0){
                 zig.add(mapElement.getValue());
@@ -29,7 +29,7 @@ class Solution {
         }
         return zig;
     }
-    private void bfs(TreeNode root, int level){
+    private void dfs(TreeNode root, int level){
         if (root == null) return;
         if(map.containsKey(level)){
             map.get(level).add(root.val);
@@ -38,7 +38,7 @@ class Solution {
             temp.add(root.val);
             map.put(level, temp );
         }
-        bfs(root.left, level + 1);
-        bfs(root.right, level + 1);
+        dfs(root.left, level + 1);
+        dfs(root.right, level + 1);
     }
 }
