@@ -12,3 +12,13 @@ Memory
 Beats
 8.6%
 
+Java
+https://leetcode.com/problems/shuffle-string/submissions/935262944/
+Runtime
+4 ms
+Beats
+25.74%
+Memory
+42.6 MB
+Beats
+72.41%
