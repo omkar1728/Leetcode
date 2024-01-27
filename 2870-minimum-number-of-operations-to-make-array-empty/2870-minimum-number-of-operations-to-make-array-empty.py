@@ -11,13 +11,9 @@ class Solution:
         for i in d.keys():
             if d[i] == 1:
                 return -1
-            elif d[i]%3 == 1:
-                ans += d[i]//3 + 1
-            elif d[i]%3 == 2:
+            elif d[i]%3 != 0:
                 ans += d[i]//3 + 1
             else:
                 ans += d[i]//3
-
-
 
         return ans
